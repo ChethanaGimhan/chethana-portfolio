@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const focusAreas = [
   "Software Engineering",
   "Full-Stack Development",
@@ -11,7 +13,7 @@ export default function About() {
       id="about"
       className="flex flex-col items-center px-6 py-24 text-center"
     >
-      <div className="flex max-w-2xl flex-col items-center gap-6">
+      <Reveal className="flex max-w-2xl flex-col items-center gap-6">
         <h2 className="text-3xl font-bold tracking-tight text-foreground">
           About Me
         </h2>
@@ -49,7 +51,7 @@ export default function About() {
             </span>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
