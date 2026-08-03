@@ -17,11 +17,11 @@ export default function Hero() {
         </p>
 
         <p
-          className="animate-fade-in-up text-base text-zinc-500 dark:text-zinc-500 max-w-xl"
+          className="animate-fade-in-up text-base italic text-zinc-500 dark:text-zinc-500 max-w-xl"
           style={{ animationDelay: "200ms" }}
         >
-          Building secure, containerized systems — from DevOps pipelines to
-          full-stack applications.
+          I don&apos;t stop at &ldquo;it works&rdquo; — I stop at knowing why
+          it works, and how it breaks.
         </p>
 
         <div
@@ -50,6 +50,14 @@ export default function Hero() {
           >
             LinkedIn
           </a>
+        </div>
+
+        <div
+          className="animate-fade-in-up flex items-center gap-2 rounded-full border border-solid border-black/[.08] px-4 py-2 text-sm text-zinc-600 dark:border-white/[.145] dark:text-zinc-400"
+          style={{ animationDelay: "400ms" }}
+        >
+          <span className="h-2 w-2 rounded-full bg-emerald-500" />
+          Open to internships in Cyber Security &amp; Software Engineering
         </div>
       </div>
     </section>
