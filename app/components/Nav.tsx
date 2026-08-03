@@ -1,14 +1,14 @@
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Nav() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-black/[.08] bg-background/80 px-4 py-3 backdrop-blur dark:border-white/[.145] sm:px-6 sm:py-4">
       <a
-        href="#home"
+        href="/#home"
         className="font-semibold tracking-tight text-foreground whitespace-nowrap"
       >
         <span className="sm:hidden">CG</span>

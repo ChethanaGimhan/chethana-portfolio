@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "../../lib/projects";
 
@@ -36,12 +35,12 @@ export default async function ProjectDetail({
   return (
     <main className="flex flex-1 flex-col px-6 py-16">
       <div className="mx-auto w-full max-w-2xl">
-        <Link
+        <a
           href="/#projects"
           className="text-sm text-zinc-600 underline underline-offset-4 dark:text-zinc-400"
         >
           ← Back to projects
-        </Link>
+        </a>
 
         <h1 className="mt-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           {project.title}
