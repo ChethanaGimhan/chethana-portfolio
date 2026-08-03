@@ -33,9 +33,7 @@ export default function About() {
           </span>
           , specializing in Cyber Security. I enjoy building things end to
           end and understanding how they work under the hood, with a growing
-          interest in offensive security — probing for vulnerabilities with
-          tools like Burp Suite, and reasoning about network design at the
-          level of VLANs, routing, and DMZs.
+          interest in offensive security.
         </p>
 
         <div className="grid w-full grid-cols-[max-content_1fr] gap-x-4 gap-y-2 rounded-2xl border border-solid border-black/[.08] bg-black/[.02] p-6 text-left font-mono text-sm text-zinc-600 dark:border-white/[.145] dark:bg-white/[.03] dark:text-zinc-400">

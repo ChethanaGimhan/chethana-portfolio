@@ -32,7 +32,7 @@ export default function Hero() {
             href="mailto:chethanagimhan@gmail.com"
             className="flex h-12 items-center justify-center rounded-full bg-foreground px-6 text-background transition hover:scale-[1.03] hover:bg-[#383838] active:scale-[0.97] dark:hover:bg-[#ccc]"
           >
-            Get in Touch
+            Email Me
           </a>
           <a
             href="https://github.com/ChethanaGimhan"
