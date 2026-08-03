@@ -16,12 +16,19 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Reveal key={project.slug} delayMs={index * 80}>
               <div className="flex h-full flex-col gap-4 rounded-2xl border border-solid border-black/[.08] p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-white/[.145] dark:hover:shadow-black/40">
-                <Link
-                  href={`/projects/${project.slug}`}
-                  className="text-xl font-semibold text-foreground hover:underline"
-                >
-                  {project.title}
-                </Link>
+                <div className="flex flex-wrap items-center gap-2">
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="text-xl font-semibold text-foreground hover:underline"
+                  >
+                    {project.title}
+                  </Link>
+                  {project.status && (
+                    <span className="rounded-full bg-amber-500/15 px-2.5 py-0.5 text-xs font-medium text-amber-700 dark:text-amber-400">
+                      {project.status}
+                    </span>
+                  )}
+                </div>
 
                 <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                   {project.description}

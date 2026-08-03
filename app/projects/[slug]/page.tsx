@@ -42,9 +42,16 @@ export default async function ProjectDetail({
           ← Back to projects
         </a>
 
-        <h1 className="mt-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          {project.title}
-        </h1>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {project.title}
+          </h1>
+          {project.status && (
+            <span className="rounded-full bg-amber-500/15 px-3 py-1 text-sm font-medium text-amber-700 dark:text-amber-400">
+              {project.status}
+            </span>
+          )}
+        </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tech.map((tech) => (
@@ -78,7 +85,7 @@ export default async function ProjectDetail({
 
           <section>
             <h2 className="text-lg font-semibold text-foreground">
-              Outcome
+              {project.status ? "Current Status" : "Outcome"}
             </h2>
             <p className="mt-2 text-base leading-7 text-zinc-600 dark:text-zinc-400">
               {project.outcome}
