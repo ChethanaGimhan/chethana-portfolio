@@ -31,14 +31,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* Runs before hydration so a returning visitor who chose dark
-            mode doesn't see a flash of the light theme first. Light stays
+        {/* Runs before hydration so a returning visitor who chose light
+            mode doesn't see a flash of the dark theme first. Dark stays
             the default for everyone else, regardless of system preference. */}
         <Script id="theme-init" strategy="beforeInteractive">
           {`
             (function () {
               try {
-                if (localStorage.getItem("theme") === "dark") {
+                if (localStorage.getItem("theme") !== "light") {
                   document.documentElement.classList.add("dark");
                 }
               } catch (e) {}
