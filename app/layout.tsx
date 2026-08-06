@@ -28,18 +28,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      // Dark is the default theme, baked in statically so there's no
+      // runtime class mutation needed for most visitors.
+      // suppressHydrationWarning covers the one case where the script
+      // below removes it before hydration (a returning visitor who chose
+      // light).
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         {/* Runs before hydration so a returning visitor who chose light
-            mode doesn't see a flash of the dark theme first. Dark stays
-            the default for everyone else, regardless of system preference. */}
+            mode doesn't see a flash of the dark theme first. */}
         <Script id="theme-init" strategy="beforeInteractive">
           {`
             (function () {
               try {
-                if (localStorage.getItem("theme") !== "light") {
-                  document.documentElement.classList.add("dark");
+                if (localStorage.getItem("theme") === "light") {
+                  document.documentElement.classList.remove("dark");
                 }
               } catch (e) {}
             })();
