@@ -35,6 +35,8 @@ export default async function ProjectDetail({
   return (
     <main className="flex flex-1 flex-col px-6 py-16">
       <div className="mx-auto w-full max-w-2xl">
+        {/* Plain <a>, not next/link — see Nav.tsx for why. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
         <a
           href="/#projects"
           className="text-sm text-zinc-600 underline underline-offset-4 dark:text-zinc-400"

@@ -13,6 +13,7 @@ export default function Nav() {
       {/* Plain <a> tags (not next/link) are intentional here — Link's
           client-side hash navigation has a routing bug in this Next.js
           version that concatenates hashes instead of replacing them. */}
+      {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
       <a
         href="/#home"
         className="font-semibold tracking-tight text-foreground whitespace-nowrap"
