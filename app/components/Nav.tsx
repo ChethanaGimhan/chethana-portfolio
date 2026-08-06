@@ -1,3 +1,5 @@
+import ThemeToggle from "./ThemeToggle";
+
 const links = [
   { href: "/#about", label: "About" },
   { href: "/#skills", label: "Skills" },
@@ -8,6 +10,9 @@ const links = [
 export default function Nav() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between border-b border-solid border-black/[.08] bg-background/80 px-4 py-3 backdrop-blur dark:border-white/[.145] sm:px-6 sm:py-4">
+      {/* Plain <a> tags (not next/link) are intentional here — Link's
+          client-side hash navigation has a routing bug in this Next.js
+          version that concatenates hashes instead of replacing them. */}
       <a
         href="/#home"
         className="font-semibold tracking-tight text-foreground whitespace-nowrap"
@@ -33,6 +38,7 @@ export default function Nav() {
         >
           Resume
         </a>
+        <ThemeToggle />
       </nav>
     </header>
   );

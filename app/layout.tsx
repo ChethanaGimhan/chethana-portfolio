@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import Nav from "./components/Nav";
 import "./globals.css";
 
@@ -30,6 +31,20 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {/* Runs before hydration so a returning visitor who chose dark
+            mode doesn't see a flash of the light theme first. Light stays
+            the default for everyone else, regardless of system preference. */}
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`
+            (function () {
+              try {
+                if (localStorage.getItem("theme") === "dark") {
+                  document.documentElement.classList.add("dark");
+                }
+              } catch (e) {}
+            })();
+          `}
+        </Script>
         <Nav />
         {children}
       </body>
