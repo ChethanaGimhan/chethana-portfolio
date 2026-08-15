@@ -3,29 +3,40 @@ import Reveal from "./Reveal";
 const skillGroups = [
   {
     category: "Languages",
+    skills: ["Python", "C/C++", "Java", "JavaScript", "SQL", "VHDL"],
+  },
+  {
+    category: "Backend",
+    skills: ["Python (FastAPI)", "JavaScript (Node.js)"],
+  },
+  {
+    category: "Frontend",
+    skills: ["React.js", "Next.js", "Flutter", "HTML", "Tailwind CSS"],
+  },
+  {
+    category: "Database",
     skills: [
-      "Java",
-      "Python",
-      "C++",
-      "C",
-      "JavaScript",
-      "TypeScript",
-      "Dart",
-      "SQL",
-      "VHDL",
+      "PostgreSQL",
+      "MySQL",
+      "ER Modeling",
+      "Schema Design & Normalization",
     ],
   },
   {
-    category: "Backend & Frontend",
-    skills: ["FastAPI", "Node.js", "Express", "React", "Flutter"],
-  },
-  {
     category: "DevOps & Cloud",
-    skills: ["Docker", "Kubernetes", "GitHub Actions", "ArgoCD", "Git"],
+    skills: [
+      "Docker",
+      "Git",
+      "GitHub Actions (CI/CD)",
+      "GHCR",
+      "ArgoCD",
+      "Kubernetes",
+      "Terraform",
+    ],
   },
   {
-    category: "Databases & Security",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Linux"],
+    category: "Systems & Other",
+    skills: ["Linux", "Trivy", "Networking", "VHDL/FPGA design"],
   },
 ];
 
