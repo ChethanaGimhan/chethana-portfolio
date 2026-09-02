@@ -51,14 +51,6 @@ export default function Hero() {
             LinkedIn
           </a>
         </div>
-
-        <div
-          className="animate-fade-in-up flex items-center gap-2 rounded-full border border-solid border-black/[.08] px-4 py-2 text-sm text-zinc-600 dark:border-white/[.145] dark:text-zinc-400"
-          style={{ animationDelay: "400ms" }}
-        >
-          <span className="h-2 w-2 rounded-full bg-emerald-500" />
-          Open to internships in Cyber Security &amp; Software Engineering
-        </div>
       </div>
     </section>
   );
