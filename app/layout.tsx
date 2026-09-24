@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import Nav from "./components/Nav";
+import { siteUrl } from "./lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Chethana Gimhan | Portfolio",
   description:
     "Portfolio of Chethana Gimhan, a Computer Science & Engineering undergraduate at the University of Moratuwa specializing in Cyber Security.",

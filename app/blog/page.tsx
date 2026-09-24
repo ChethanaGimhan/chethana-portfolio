@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Blog | Chethana Gimhan",
   description:
     "Notes on cyber security, DevOps, and the systems I build and break.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function Blog() {

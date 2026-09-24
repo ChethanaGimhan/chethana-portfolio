@@ -17,6 +17,7 @@ export async function generateMetadata({
   return {
     title: project ? `${project.title} | Chethana Gimhan` : "Project not found",
     description: project?.description,
+    alternates: project ? { canonical: `/projects/${slug}` } : undefined,
   };
 }
 
